@@ -118,3 +118,22 @@ gsap.from('.contact-content > *', {
   duration: 1,
   ease: 'power3.out'
 })
+
+// --- Mobile Menu ---
+const hamburger = document.querySelector('.hamburger')
+const mobileMenu = document.querySelector('.mobile-menu')
+const mobileLinks = document.querySelectorAll('.mobile-link')
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active')
+    mobileMenu.classList.toggle('open')
+  })
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active')
+      mobileMenu.classList.remove('open')
+    })
+  })
+}
