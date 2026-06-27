@@ -79,7 +79,31 @@ tl.from('.hero-desc', { y: 20, opacity: 0, duration: 1 }, 1.5)
 tl.from('.hero .btn', { y: 20, opacity: 0, duration: 1 }, 1.7)
 tl.from('.scroll-indicator', { opacity: 0, duration: 1 }, 2.0)
 
-// 2. Scroll Animations (Work Section)
+// 2. Scroll Animations (About Section)
+gsap.from('.about-image-wrapper', {
+  scrollTrigger: {
+    trigger: '.about',
+    start: 'top 80%',
+  },
+  x: -50,
+  opacity: 0,
+  duration: 1.2,
+  ease: 'power3.out'
+})
+
+gsap.from('.about-content > *', {
+  scrollTrigger: {
+    trigger: '.about',
+    start: 'top 80%',
+  },
+  x: 50,
+  opacity: 0,
+  stagger: 0.2,
+  duration: 1,
+  ease: 'power3.out'
+})
+
+// 3. Scroll Animations (Work Section)
 gsap.from('.section-header', {
   scrollTrigger: {
     trigger: '.work',
