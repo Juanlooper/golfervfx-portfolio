@@ -609,13 +609,32 @@ h1, h2, h3 {
   .contact-desc { margin: 0 auto; }
 }
 @media (max-width: 768px) {
+  /* Disable custom cursor on mobile */
+  .cursor { display: none !important; }
+  body, a, button, input, textarea, .work-card { cursor: auto !important; }
+  
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .hero-title { font-size: 13vw; }
+  
+  /* Hero fixes */
+  .hero-subtitle { font-size: 0.8rem; letter-spacing: 1px; }
+  .hero-title { font-size: 11vw; }
   .hero-desc { font-size: 1rem; }
-  .contact-title { font-size: 3rem; }
-  .footer-container { flex-direction: column; text-align: center; }
-  .marquee-content { font-size: 1.5rem; }
+  
+  /* Section spacing */
+  .work, .contact { padding: 5rem 0; }
+  
+  /* Portfolio fixes */
+  .section-title { font-size: 2.5rem; word-break: break-word; }
   .overlay-content { padding: 1.5rem; }
+  .overlay-content h3 { font-size: 1.3rem; margin-bottom: 0.3rem; word-break: break-word; }
+  .overlay-content .project-desc { font-size: 0.85rem; margin-bottom: 0.5rem; }
+  .overlay-content .project-link { font-size: 0.75rem; }
+  
+  /* Contact fixes */
+  .contact-title { font-size: 2.5rem; word-break: break-word; }
+  
+  .footer-container { flex-direction: column; text-align: center; }
+  .marquee-content { font-size: 1.2rem; }
   .preloader-logo { font-size: 3rem; }
 }
